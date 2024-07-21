@@ -192,6 +192,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e3b5ca7a04898ad4bcd41c90c5285445ff5b791899bb1b0abdd2a2aa791211d7"
 
 [[package]]
+name = "bytemuck"
+version = "1.16.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b236fc92302c97ed75b38da1f4917b5cdda4984745740f153a5d3059e48d725e"
+
+[[package]]
 name = "byteorder"
 version = "1.4.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -925,7 +931,7 @@ dependencies = [
  "itoa",
  "pin-project-lite",
  "socket2",
- "tokio 1.27.0",
+ "tokio 1.28.2",
  "tower-service",
  "tracing",
  "want",
@@ -1042,7 +1048,7 @@ dependencies = [
  "jsonrpc-core",
  "lazy_static",
  "log",
- "tokio 1.27.0",
+ "tokio 1.28.2",
  "tokio-stream",
  "tokio-util",
  "unicase",
@@ -1076,7 +1082,11 @@ dependencies = [
 [[package]]
 name = "kodama"
 version = "0.2.3"
-source = "git+https://github.com/SubconsciousCompute/kodama#c0dcc359867aa0d0f23c75f01e7b412fa891954a"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7a44f3a71a44fbf49ce38152db7dc9adf959d4fe5c29344cd1858bdbda8d9091"
+dependencies = [
+ "num-traits",
+]
 
 [[package]]
 name = "lazy_static"
@@ -1521,6 +1531,7 @@ checksum = "b15813163c1d831bf4a13c3610c05c0d03b39feb07f7e09fa234dac9b15aaf39"
 name = "owlyshield_ransom"
 version = "1.1.1"
 dependencies = [
+ "bytemuck",
  "byteorder",
  "chrono",
  "configparser",
@@ -1547,7 +1558,7 @@ dependencies = [
  "strum",
  "strum_macros",
  "sysinfo",
- "tokio 1.27.0",
+ "tokio 1.28.2",
  "tracing",
  "tracing-subscriber 0.3.17",
  "wchar",
@@ -1665,6 +1676,7 @@ checksum = "e8d0eef3571242013a0d5dc84861c3ae4a652e56e12adf8bdc26ff5f8cb34c94"
 name = "probes"
 version = "0.1.0"
 dependencies = [
+ "bytemuck",
  "cargo-bpf",
  "cty",
  "redbpf-macros",
@@ -1884,7 +1896,7 @@ dependencies = [
  "libbpf-sys",
  "libc",
  "regex",
- "tokio 1.27.0",
+ "tokio 1.28.2",
  "tracing",
  "zero",
 ]
@@ -2497,9 +2509,9 @@ dependencies = [
 
 [[package]]
 name = "tokio"
-version = "1.27.0"
+version = "1.28.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d0de47a4eecbe11f498978a9b29d792f0d2692d1dd003650c24c76510e3bc001"
+checksum = "94d7b1cfd2aa4011f2de74c2c4c63665e27a71006b0a192dcd2710272e73dfa2"
 dependencies = [
  "autocfg 1.1.0",
  "bytes 1.4.0",
@@ -2510,7 +2522,7 @@ dependencies = [
  "signal-hook-registry",
  "socket2",
  "tokio-macros",
- "windows-sys 0.45.0",
+ "windows-sys 0.48.0",
 ]
 
 [[package]]
@@ -2557,9 +2569,9 @@ dependencies = [
 
 [[package]]
 name = "tokio-macros"
-version = "2.0.0"
+version = "2.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "61a573bdc87985e9d6ddeed1b3d864e8a302c847e40d647746df2f1de209d1ce"
+checksum = "630bdcf245f78637c13ec01ffae6187cca34625e8c63150d424b59e55af2675e"
 dependencies = [
  "proc-macro2 1.0.56",
  "quote 1.0.26",
@@ -2605,7 +2617,7 @@ checksum = "8fb52b74f05dbf495a8fba459fdc331812b96aa086d9eb78101fa0d4569c3313"
 dependencies = [
  "futures-core",
  "pin-project-lite",
- "tokio 1.27.0",
+ "tokio 1.28.2",
 ]
 
 [[package]]
@@ -2672,7 +2684,7 @@ dependencies = [
  "futures-sink",
  "log",
  "pin-project-lite",
- "tokio 1.27.0",
+ "tokio 1.28.2",
 ]
 
 [[package]]
